@@ -8,6 +8,7 @@ namespace Methods
     {
         public static int Test1(int a, int b)
         {
+            //Пользователь вводит 2 числа (A и B). Если A>B, подсчитать A+B, если A=B, подсчитать A*B, если A<B, подсчитать A-B.
             if (a > b)
             {
                 return a + b;
@@ -24,6 +25,7 @@ namespace Methods
 
         public static string Test2(int x, int y)
         {
+            //Пользователь вводит 2 числа (X и Y). Определить какой четверти принадлежит точка с координатами (X,Y).
             if (x != 0 || y != 0)
             {
                 if (x > 0 && y > 0)
@@ -48,6 +50,7 @@ namespace Methods
 
         public static int[] Test3(int a, int b, int c)
         {
+            //Пользователь вводит 3 числа (A, B и С). Выведите их в консоль в порядке возрастания.
             int temp = 0;
             if (a > b)
             {
@@ -72,7 +75,8 @@ namespace Methods
 
         public static double[] Test4(double a, double b, double c)
         {
-            if(a == 0)
+            //Пользователь вводит 3 числа (A, B и С). Выведите в консоль решение(значения X) квадратного уравнения стандартного вида, где AX2+BX+C=0.
+            if (a == 0)
             {
                 throw new Exception("a == 0");
             }
@@ -97,6 +101,7 @@ namespace Methods
 
         public static string Test5(int a)
         {
+            //Пользователь вводит двузначное число. Выведите в консоль прописную запись этого числа. Например при вводе “25” в консоль будет выведено “двадцать пять”.
             int x = Convert.ToInt32(a);
             string number = "";
             if (x >= 10 && x < 20)
