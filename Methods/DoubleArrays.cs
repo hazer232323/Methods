@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Methods
 {
-    class DoubleArrays
+    public class DoubleArrays
     {
         public static int[,] CreateAndFill(int a, int b, int max)
         {
@@ -101,6 +101,7 @@ namespace Methods
         }
         public static int Test5(int[,] arr)
         {
+            //Найти количество элементов массива, которые больше всех своих соседей одновременно
             int l = 0;
             int y = arr.GetLength(0) - 1;
             int x = arr.GetLength(1) - 1;

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Methods
 {
-    class Arrays
+    public class Arrays
     {
         public static int [] CreateAndFill(int a, int max)
         {

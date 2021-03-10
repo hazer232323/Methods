@@ -14,6 +14,10 @@ namespace Methods
         {
             Console.WriteLine(a);
         }
+        public static void Print(decimal a)
+        {
+            Console.WriteLine(a);
+        }
         public static void Print(string a)
         {
             Console.WriteLine(a);

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Methods
 {
-    class Branches
+    public class Branches
     {
         public static int Test1(int a, int b)
         {

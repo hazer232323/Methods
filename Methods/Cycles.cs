@@ -4,12 +4,12 @@ using System.Text;
 
 namespace Methods
 {
-    class Cycles
+    public class Cycles
     {
-        public static int Test1(int a, int b)
+        public static decimal Test1(decimal a, decimal b)
         {
             //Пользователь вводит 2 числа (A и B). Возвести число A в степень B.
-            int result = 0;
+            decimal result = 0;
             if (b == 0)
             {
                 result = 1;

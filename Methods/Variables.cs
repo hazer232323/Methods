@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Methods
 {
-    class Variables
+    public class Variables
     {
         public static double Test1(double a, double b)
         {
