@@ -78,7 +78,7 @@ namespace Methods
             //Пользователь вводит 3 числа (A, B и С). Выведите в консоль решение(значения X) квадратного уравнения стандартного вида, где AX2+BX+C=0.
             if (a == 0)
             {
-                throw new Exception("a == 0");
+                throw new ArgumentException("a == 0");
             }
             double descriminant = b * b - 4 * a * c;
             if (descriminant > 0)
@@ -212,7 +212,7 @@ namespace Methods
             }
             else
             {
-                throw new Exception("Число не двухзначное");
+                throw new ArgumentException("Число не двухзначное");
             }
             return number;
         }

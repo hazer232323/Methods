@@ -26,6 +26,8 @@ namespace Methods
         }
         public static int Test1(int[] arr)
         {
+            if (arr.Length == 0)
+                throw new ArgumentException("arr.Length == 0");
             //Найти минимальный элемент массива
             int min = arr[0];
             for (int i = 1; i < arr.Length; i++)
@@ -40,6 +42,8 @@ namespace Methods
 
         public static int Test2(int[] arr)
         {
+            if (arr.Length == 0)
+                throw new ArgumentException("arr.Length == 0");
             //Найти максимальный элемент массива
             int max = arr[0];
             for (int i = 1; i < arr.Length; i++)
@@ -53,6 +57,8 @@ namespace Methods
         }
         public static int Test3(int[] arr)
         {
+            if (arr.Length == 0)
+                throw new ArgumentException("arr.Length == 0");
             //Найти индекс минимального элемента массива
             int min = arr[0];
             int minIndex = 0;
@@ -68,6 +74,8 @@ namespace Methods
         }
         public static int Test4(int[] arr)
         {
+            if (arr.Length == 0)
+                throw new ArgumentException("arr.Length == 0");
             //Найти индекс максимального элемента массива
             int max = arr[0];
             int maxIndex = 0;
@@ -83,6 +91,8 @@ namespace Methods
         }
         public static int Test5(int[] arr)
         {
+            if (arr.Length == 0)
+                throw new ArgumentException("arr.Length == 0");
             //Посчитать сумму элементов массива с нечетными индексами
             int summ = 0;
             for (int i = 0; i < arr.Length; i++)

@@ -17,6 +17,12 @@ namespace Methods.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestCase(new int[0])]
+        public static void Test1_WhenArrayEmpty_ArgumentExpection(int[] arr)
+        {
+            Assert.Throws<ArgumentException>(() => Arrays.Test1(arr));   
+        }
+
         [TestCase(new int[] { 1, 2, 3, 4, 5 }, 5)]
         [TestCase(new int[] { 14, 22, 13, 44, 51 }, 51)]
         [TestCase(new int[] { 223, 142, 531, 431, 54 }, 531)]
@@ -25,6 +31,12 @@ namespace Methods.Tests
             int actual = Arrays.Test2(arr);
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(new int[0])]
+        public static void Test2_WhenArrayEmpty_ArgumentExpection(int[] arr)
+        {
+            Assert.Throws<ArgumentException>(() => Arrays.Test2(arr));
         }
 
         [TestCase(new int[] { 1, 2, 3, 4, 5 }, 0)]
@@ -37,6 +49,12 @@ namespace Methods.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestCase(new int[0])]
+        public static void Test3_WhenArrayEmpty_ArgumentExpection(int[] arr)
+        {
+            Assert.Throws<ArgumentException>(() => Arrays.Test3(arr));
+        }
+
         [TestCase(new int[] { 1, 2, 3, 4, 5 }, 4)]
         [TestCase(new int[] { 14, 22, 13, 44, 51 }, 4)]
         [TestCase(new int[] { 223, 142, 531, 431, 54 }, 2)]
@@ -45,6 +63,12 @@ namespace Methods.Tests
             int actual = Arrays.Test4(arr);
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(new int[0])]
+        public static void Test4_WhenArrayEmpty_ArgumentExpection(int[] arr)
+        {
+            Assert.Throws<ArgumentException>(() => Arrays.Test4(arr));
         }
 
         [TestCase(new int[] { 1, 2, 3, 4, 5 }, 6)]
@@ -57,6 +81,12 @@ namespace Methods.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestCase(new int[0])]
+        public static void Test5_WhenArrayEmpty_ArgumentExpection(int[] arr)
+        {
+            Assert.Throws<ArgumentException>(() => Arrays.Test5(arr));
+        }
+
         [TestCase(new int[] { 1, 2, 3 }, new int[] { 3, 2, 1 })]
         [TestCase(new int[] { 4, 2, 6, 7 }, new int[] { 7, 6, 2, 4 })]
         [TestCase(new int[] { -88, 6, 12 }, new int[] { 12, 6, -88 })]
@@ -67,6 +97,7 @@ namespace Methods.Tests
             Assert.AreEqual(expected, actual);
         }
 
+
         [TestCase(new int[] { 1, 2, 3, 4, 5 }, 3)]
         [TestCase(new int[] { 14, 22, 13, 44, 51 }, 2)]
         [TestCase(new int[] { 223, 142, 531, 431, 54 }, 3)]
@@ -76,6 +107,7 @@ namespace Methods.Tests
 
             Assert.AreEqual(expected, actual);
         }
+
 
         [TestCase(new int[] { 1, 2, 3, 4, 5 }, new int[] {4, 5, 3, 1, 2 })]
         [TestCase(new int[] { 4, 2, 6, 7 }, new int[] { 6, 7, 4, 2 })]
@@ -106,5 +138,6 @@ namespace Methods.Tests
 
             Assert.AreEqual(expected, actual);
         }
+
     }
 }

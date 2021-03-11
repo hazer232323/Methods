@@ -27,6 +27,12 @@ namespace Methods.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestCase(0)]
+        public static void Test2_WhenDivideByZero_DivideByZeroExpection(int a)
+        {
+            Assert.Throws<DivideByZeroException>(() => Cycles.Test2(a));
+        }
+
         [TestCase(16, 3)]
         [TestCase(25, 4)]
         [TestCase(36, 5)]
@@ -35,6 +41,14 @@ namespace Methods.Tests
             int actual = Cycles.Test3(a);
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(0)]
+        [TestCase(-12)]
+        [TestCase(-123123)]
+        public static void Test3_WhenNumberIsNegativeOrEqualZero_ArgumentExpection(int a)
+        {
+            Assert.Throws<ArgumentException>(() => Cycles.Test3(a));
         }
 
         [TestCase(9, 3)]
@@ -47,6 +61,12 @@ namespace Methods.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestCase(0)]
+        public static void Test4_WhenNumberEqualZero_ArgumentExpection(int a)
+        {
+            Assert.Throws<ArgumentException>(() => Cycles.Test4(a));
+        }
+
         [TestCase(22, 1, 42)]
         [TestCase(13, 23, 35)]
         [TestCase(34, 43, 77)]
@@ -55,6 +75,12 @@ namespace Methods.Tests
             int actual = Cycles.Test5(a, b);
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(0, 0)]
+        public static void Test5_WhenNumberAandBEqualZero_ArgumentExpection(int a, int b)
+        {
+            Assert.Throws<ArgumentException>(() => Cycles.Test5(a, b));
         }
 
         [TestCase(3, 2)]
@@ -67,6 +93,14 @@ namespace Methods.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestCase(0)]
+        [TestCase(-21)]
+        [TestCase(-355)]
+        public static void Test6_WhenNumberIsNegativeOrEqualZero_ArgumentExpection(int a)
+        {
+            Assert.Throws<ArgumentException>(() => Cycles.Test6(a));
+        }
+
         [TestCase(7, 14, 7)]
         [TestCase(2, 22, 2)]
         [TestCase(15, 45, 15)]
@@ -77,6 +111,12 @@ namespace Methods.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestCase(0, 0)]
+        public static void Test7_WhenNumberAandBEqualZero_ArgumentExpection(int a, int b)
+        {
+            Assert.Throws<ArgumentException>(() => Cycles.Test7(a, b));
+        }
+
         [TestCase(729, 9)]
         [TestCase(125, 5)]
         [TestCase(27, 3)]
@@ -85,6 +125,14 @@ namespace Methods.Tests
             int actual = Cycles.Test8(n);
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(0)]
+        [TestCase(-21)]
+        [TestCase(-355)]
+        public static void Test8_WhenNumberIsNegativeOrEqualZero_ArgumentExpection(int a)
+        {
+            Assert.Throws<ArgumentException>(() => Cycles.Test8(a));
         }
 
         [TestCase(12345, 3)]
@@ -115,6 +163,14 @@ namespace Methods.Tests
             int[] actual = Cycles.Test11(n);
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(0)]
+        [TestCase(-21)]
+        [TestCase(-355)]
+        public static void Test11_WhenNumberIsNegativeOrEqualZero_ArgumentExpection(int a)
+        {
+            Assert.Throws<ArgumentException>(() => Cycles.Test11(a));
         }
 
         [TestCase(123, 3456, "Да")]

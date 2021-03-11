@@ -6,33 +6,10 @@ namespace Methods
 {
     public class DoubleArrays
     {
-        public static int[,] CreateAndFill(int a, int b, int max)
-        {
-            if (a <= 0)
-            {
-                throw new Exception("a <= 0");
-            }
-            if (b <= 0)
-            {
-                throw new Exception("b <= 0");
-            }
-            if (max < 0)
-            {
-                throw new Exception("max < 0");
-            }
-            int[,] arr = new int[a, b];
-            Random random = new Random();
-            for (int i = 0; i < arr.GetLength(0); i++)
-            {
-                for(int j = 0; j < arr.GetLength(1); j++)
-                {
-                    arr[i, j] = random.Next(max);
-                }    
-            }
-            return arr;
-        }
         public static int Test1(int[,] arr)
         {
+            if (arr.Length == 0)
+                throw new ArgumentException("arr.Length == 0");
             //Найти минимальный элемент массива
             int min = arr[0, 0];
             for (int i = 0; i < arr.GetLength(0); i++)
@@ -49,6 +26,8 @@ namespace Methods
         }
         public static int Test2(int[,] arr)
         {
+            if (arr.Length == 0)
+                throw new ArgumentException("arr.Length == 0");
             //Найти максимальный элемент массива
             int max = arr[0, 0];
             for (int i = 0; i < arr.GetLength(0); i++)
@@ -65,9 +44,11 @@ namespace Methods
         }
         public static string Test3(int[,] arr)
         {
+            if (arr.Length == 0)
+                throw new ArgumentException("arr.Length == 0");
             //Найти индекс минимального элемента массива
             int min = arr[0, 0];
-            string minIndex = "";
+            string minIndex = "0, 0";
             for (int i = 0; i < arr.GetLength(0); i++)
             {
                 for (int j = 0; j < arr.GetLength(1); j++)
@@ -83,9 +64,11 @@ namespace Methods
         }
         public static string Test4(int[,] arr)
         {
+            if (arr.Length == 0)
+                throw new ArgumentException("arr.Length == 0");
             //Найти индекс максимального элемента массива
             int max = arr[0, 0];
-            string maxIndex = "";
+            string maxIndex = "0, 0";
             for (int i = 0; i < arr.GetLength(0); i++)
             {
                 for (int j = 0; j < arr.GetLength(1); j++)
@@ -101,6 +84,10 @@ namespace Methods
         }
         public static int Test5(int[,] arr)
         {
+            if(arr.Length == 0)
+            { 
+                return 0; 
+            }
             //Найти количество элементов массива, которые больше всех своих соседей одновременно
             int l = 0;
             int y = arr.GetLength(0) - 1;
@@ -169,6 +156,31 @@ namespace Methods
                 }
             }
             return retArr;
+        }
+        public static int[,] CreateAndFill(int a, int b, int max)
+        {
+            if (a <= 0)
+            {
+                throw new Exception("a <= 0");
+            }
+            if (b <= 0)
+            {
+                throw new Exception("b <= 0");
+            }
+            if (max < 0)
+            {
+                throw new Exception("max < 0");
+            }
+            int[,] arr = new int[a, b];
+            Random random = new Random();
+            for (int i = 0; i < arr.GetLength(0); i++)
+            {
+                for (int j = 0; j < arr.GetLength(1); j++)
+                {
+                    arr[i, j] = random.Next(max);
+                }
+            }
+            return arr;
         }
     }
 }

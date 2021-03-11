@@ -47,6 +47,14 @@ namespace Methods.Tests
             Assert.AreEqual(expected, actual);
         }
 
+        [TestCase(0, 1, 2)]
+        [TestCase(0, 13, 21)]
+        [TestCase(0, 15, 211)]
+        public static void Test4_WhenAEqualZero_ArgumentExpection(double a, double b, double c)
+        {
+            Assert.Throws<ArgumentException>(() => Branches.Test4(a, b, c));
+        }
+
         [TestCase(21, "Двадцатьодин")]
         [TestCase(99, "Девяностодевять")]
         [TestCase(45, "Сорокпять")]
@@ -55,6 +63,14 @@ namespace Methods.Tests
             string actual = Branches.Test5(a);
 
             Assert.AreEqual(expected, actual);
+        }
+
+        [TestCase(1321)]
+        [TestCase(0)]
+        [TestCase(131)]
+        public static void Test5_WhenNumberNotDvuhznach_ArgumentExpection(int a)
+        {
+            Assert.Throws<ArgumentException>(() => Branches.Test5(a));
         }
     }
 }

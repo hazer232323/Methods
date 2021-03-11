@@ -7,9 +7,15 @@ namespace Methods
     {
         static void Main(string[] args)
         {
-            Print(Variables.Test1(125, -500));
+            int[,] aa = new int[0, 0];
+            Print(DoubleArrays.Test5(aa));
+            Print(Arrays.Test9(new int[0]));
+            Print(Cycles.Test12(0, 1234));
+            Print(Cycles.Test9(12345));
+            Print(Cycles.Test7(0, 36));
+            Print(Variables.Test1(125, -399));
             Print(Variables.Test3(10, 2));
-            Print(Variables.Test4(2, 3, 5));
+            Print(Variables.Test4(11, 3, 7));
             Print(Variables.Test4(4, 7, 5));
             Print(Variables.Test4(6, -3, 9));
             Print(Variables.Test5(2,4,3,6));
@@ -63,6 +69,10 @@ namespace Methods
             float x = 0.1f;
             float one = 1f;
             Console.WriteLine(one - x * 10f);
+            int[,] dArr3 = DoubleArrays.CreateAndFill(4, 3, 100);
+            Print(DoubleArrays.Test3(dArr3));
+            int[,] dArr4 = DoubleArrays.CreateAndFill(4, 3, 100);
+            Print(DoubleArrays.Test3(dArr4));
         }
     }
 }

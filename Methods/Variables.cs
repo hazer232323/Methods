@@ -13,12 +13,20 @@ namespace Methods
             return result;
         }
 
+        public static void Test2(ref int a, ref int b)
+        {
+            //Пользователь вводит 2 значения(A и B). Поменяйте содержимое переменных A и B местами.
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+
         public static int[] Test3(int a, int b)
         {
             //Пользователь вводит 2 числа (A и B). Выведите в консоль результат деления A на B и остаток от деления.
             if (b == 0)
             {
-                throw new Exception("b == 0");
+                throw new DivideByZeroException("b == 0");
             }
             int result = a / b;
             int ostatok = a % b;
@@ -30,7 +38,7 @@ namespace Methods
             //Пользователь вводит 3 числа (A, B и С). Выведите в консоль решение(значение X) линейного уравнения стандартного вида, где A*X+B=C.
             if (a == 0)
             {
-                throw new Exception("a == 0");
+                throw new DivideByZeroException("a==0");
             }
             double x = (c - b) / a;
             return x;

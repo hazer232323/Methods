@@ -37,7 +37,7 @@ namespace Methods
             //Пользователь вводит 1 число (A). Вывести все числа от 1 до 1000, которые делятся на A.
             if (a == 0)
             {
-                throw new Exception("a == 0");
+                throw new DivideByZeroException("a == 0");
             }
             int length = 0;
             for (int i = 1; i <= 1000; i++)
@@ -63,13 +63,9 @@ namespace Methods
         public static int Test3(double a)
         {
             //Пользователь вводит 1 число(A).Найдите количество положительных целых чисел, квадрат которых меньше A.
-            if (a < 0)
+            if (a <= 0)
             {
-                throw new Exception("a < 0");
-            }
-            if (a == 0)
-            {
-                throw new Exception("a == 0");
+                throw new ArgumentException("a <= 0");
             }
             int result = 0;
             double sqrt = Math.Sqrt(a);
@@ -84,7 +80,7 @@ namespace Methods
             //Пользователь вводит 1 число (A). Вывести наибольший делитель (кроме самого A) числа A.
             if (a == 0)
             {
-                throw new Exception("a == 0");
+                throw new ArgumentException("a == 0");
             }
             int i = Math.Abs(a);
             do
@@ -103,7 +99,7 @@ namespace Methods
             //Пользователь вводит 2 числа (A и B). Вывести сумму всех чисел из диапазона от A до B, которые делятся без остатка на 7. (Учтите, что при вводе B может оказаться меньше A).
             if (a == 0 && b == 0)
             {
-                throw new Exception("a == 0 и b == 0");
+                throw new ArgumentException("a == 0 и b == 0");
             }
             if (a > b)
             {
@@ -127,12 +123,12 @@ namespace Methods
             //Пользователь вводит 1 число (N). Выведите N-ое число ряда фибоначчи. В ряду фибоначчи каждое следующее число является суммой двух предыдущих. Первое и второе считаются равными 1.
             if (n == 0)
             {
-                throw new Exception("n == 0");
+                throw new ArgumentException("n == 0");
             }
             int result = 0;
             if (n < 1)
             {
-                throw new Exception("n < 1");
+                throw new ArgumentException("n < 1");
             }
             else
             {
@@ -156,7 +152,7 @@ namespace Methods
             //Пользователь вводит 2 числа. Найти их наибольший общий делитель используя алгоритм Евклида.
             if (a == 0 && b == 0)
             {
-                throw new Exception("a == 0 и b == 0");
+                throw new ArgumentException("a == 0 и b == 0");
             }
             while (b != 0)
             {
@@ -170,11 +166,11 @@ namespace Methods
             //Пользователь вводит целое положительное число, которое является кубом целого числа N. Найдите число N методом половинного деления.
             if (n < 0)
             {
-                throw new Exception("n < 0");
+                throw new ArgumentException("n < 0");
             }
             if (n == 0)
             {
-                throw new Exception("n == 0");
+                throw new ArgumentException("n == 0");
             }
             double left = 0d;
             double right = n;
@@ -230,11 +226,11 @@ namespace Methods
             //Пользователь вводит целое положительное  число (N). Выведите числа в диапазоне от 1 до N, сумма четных цифр которых больше суммы нечетных. 
             if (n < 0)
             {
-                throw new Exception("n < 0");
+                throw new ArgumentException("n < 0");
             }
             if (n == 0)
             {
-                throw new Exception("n == 0");
+                throw new ArgumentException("n == 0");
             }
             int length = 0;
             for (int i = 1; i < n; i++)
